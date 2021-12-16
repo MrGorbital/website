@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <title>Nico's Maker-Space Website</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <!-- <link rel="shortcut icon" type="image/png" href="favicon.png"> -->
+    <body style="background-color:#202124;"></body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+        </style>   
+    <head>
+        <style>
+            #shadowBox {
+        background-color: #202124;
+        /* Fallback color */
+        background-color: #202124;
+        /* Black w/opacity/see-through */
+        /* border: 3px solid; */
+    }
+
+    .rainbow {
+        /* text-align: center; */
+        color: white;
+        /* font-size: 32px; */
+        font-family: 'JetBrains Mono', monospace;
+        /* letter-spacing: 5px; */
+    }
+    .rainbow_text_animated {
+        background: linear-gradient(to right, #6666ff, #0099ff , #12f112, #ff3399, #6666ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow_animation 6s linear infinite;
+        background-size: 400% 100%;
+    }
+    
+    @keyframes rainbow_animation {
+        0%,100% {
+            background-position: 0 0;
+        }
+    
+        50% {
+            background-position: 100% 0;
+        }
+    }
+    
+        </style>
+        </head>
+    <body>
+        <div id="shadowBox">
+            <h3 class="rainbow rainbow_text_animated">
+                <style>
+                    div.relative {
+                        margin-top: -10px;
+                    }
+                    div.fromleft{
+                        margin-left: 10px;
+                    }
+                </style>
+                <div class="fromleft">
+                    <div class="relative" style="font-size: 50px;">
+                        Welcome
+                    </div>
+                </div>
+        <hr color="blue">
+                    <!-- <div id="myDiv" style="width: 100%; height: 3.5px; background-color:red;">
+                    </div> -->
+            <!-- makes a rgb changing text break, make thinner?-->
+        </h3>
+        </div>
+    
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    .collapsible {
+      background-color: #777;
+      color: white;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+      background-color: #555;
+    }
+    
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    .bottom {
+        position: relative;
+        bottom: 5px /* or absolute */
+
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="bottom">
+    <button type="button" class="collapsible">
+        <h4 class="rainbow rainbow_text_animated">About</h4>
+    </button>
+    <div class="content">
+      <p style="font-family: JetBrains Mono, monospace;">
+<mark style="background-color: lightgrey;">- This website is the first that Nico has made in his journey to becoming fluent in HTML and Javascript.<br></mark>
+<mark style="background-color: lightgrey;">- The website implements Javascript to help animate and add elements to certain parts of the website making them appear cooler.<br></mark>
+<mark style="background-color: lightgrey;">- An example of Javascript is the rainbow title animated. The website is written in html, which stands for Hypertext Markup Language and is used to create web applications.</mark><br>
+<mark style="background-color: lightgrey;">- This website includes a hyperlink to another page of the project which is the snake game, made in Javascript with configurable settings</mark>
+
+    </p>
+    </div>
+</div>
+    
+    <a href="snake.html">
+        <div class="rainbow rainbow_text_animated centered">
+            <style>
+                .centered {
+                    font-size: 75px;
+                    position: absolute; /* or absolute */
+                    top: 50%;
+                    left: 42.125%;
+                    font-family: 'JetBrains Mono', monospace;
+                }
+            </style>
+            SNAKE
+    </div>
+    </a>   
+
+    <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>    
+    </body>
+
+    </body>
+    <body>
+        <script type="text/javascript">
+            function randomColor() {
+        return '#'+ ('000000' + (Math.random()*0xFFFFFF<<0).toString(16)).slice(-6)
+    }
+    
+    function setColor(){
+        document.getElementById('myDiv').style.backgroundColor = randomColor();
+        setTimeout(setColor, 1000);
+    }
+    setColor();
+        </script>
+    </body>
+    <head>
+        <style>
+
+#myDiv {
+        background-color: red;
+        transition: background-color 2s;
+    }
+        </style>
+    </head>
+</html>
+
+
+
